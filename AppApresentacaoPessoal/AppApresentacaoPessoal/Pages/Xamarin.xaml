@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppApresentacaoPessoal.Pages.Xamarin">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <StackLayout BackgroundColor="#DCDCDC" Padding="30">
+                <Image Source="img/otmz.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout HeightRequest="100" BackgroundColor="#A52A2A">
+                <Label Text="Grupo Otimiza" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="48"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="35">
+                <RelativeLayout HorizontalOptions="FillAndExpand">
+                    <BoxView x:Name="box1" BackgroundColor="#800000" WidthRequest="30" HeightRequest="30"/>
+                    <BoxView x:Name="box2"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=box1, Property=X, Factor=1,Constant=12}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=box1, Property=Y, Factor=1,Constant=12}"
+                             BackgroundColor="#B22222" WidthRequest="30" HeightRequest="30"/>
+                    <BoxView BackgroundColor="#FA8072"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=box2, Property=X, Factor=1,Constant=12}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=box2, Property=Y, Factor=1,Constant=12}"
+                             WidthRequest="30" HeightRequest="30"/>
+                </RelativeLayout>
+                <Label Text="Empresa" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="Black" FontSize="48"/>
+            </StackLayout>
+            <StackLayout Padding="35">
+                <Label Text="O Grupo Otimiza foi fundado em 2000 e tem como objetivo a prestação de serviços de engenharia de automação industrial e de tecnologia da informação. Administrado por profissionais experientes, provedores de soluções de software na área de automação e sistemas para área veicular, o Grupo Otimiza vem se desenvolvendo no mercado como provedor de soluções corporativas. Nossas atividades compreendem desde a consultoria e levantamento das necessidades do cliente até o desenvolvimento, comercialização e implantação das soluções."/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

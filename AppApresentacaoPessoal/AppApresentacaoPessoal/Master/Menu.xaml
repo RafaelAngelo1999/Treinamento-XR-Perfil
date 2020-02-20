@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppApresentacaoPessoal.Master.Menu"
+                  xmlns:pag="clr-namespace:AppApresentacaoPessoal.Pages">
+
+    <MasterDetailPage.Master>
+        <!--Menu-->
+        <ContentPage Title="Menu" BackgroundColor="#B22222">
+            <StackLayout>
+                <StackLayout BackgroundColor="#DCDCDC" Padding="30">
+                    <Image Source="img/otmz.png"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Spacing="25">
+                    <Button Text="Rafael Angelo" BackgroundColor="Transparent" Clicked="GoPagePerfil1" FontSize="24" TextColor="White"/>
+                    <Button Text="Oscar Alho" BackgroundColor="Transparent" FontSize="24" TextColor="White"/>
+                    <Button Text="Gabriel Azevedo" BackgroundColor="Transparent" FontSize="24" TextColor="White"/>
+                    <Button Text="Otimiza" BackgroundColor="Transparent" Clicked="GoPageXemarin" FontSize="24" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <!--Paginas-->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Perfil1/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>
